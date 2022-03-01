@@ -26,6 +26,7 @@ import { getType } from './types'
 import { getOption } from './options'
 import { pixelToPercent, parsePosition } from './utils'
 import DefaultInterface from './DefaultInterface.vue'
+import { shallowRef } from 'vue'
 
 export default {
   name: 'Notification',
@@ -70,7 +71,7 @@ export default {
     push: function (options) {
       const option = { ...getOption(options) }
       const type = { ...getType(option.type) }
-      option.component = option.component || DefaultInterface
+      option.component = shallowRef(option.component || DefaultInterface)
 
       this.queue.push({
         isVisible: true,
