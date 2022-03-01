@@ -1,24 +1,54 @@
 {
-  "name": "vue-notification",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@kuy/vue-notification",
+  "description": "package that lets you use SVG files as Vue components",
+  "version": "1.0.0",
+  "private": false,
+  "author": "kuy",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": "",
+    "email": "kuy47201@gmail.com"
+  },
+  "license": "MIT",
+  "main": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.em.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "rollup --config rollup.config.js",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+  "peerDependencies": {
+    "vue": "^3.2.31"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "core-js": "^3.6.5",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-vue": "^8.4.0",
+    "mitt": "^3.0.0",
+    "postcss": "^8.4.5",
+    "rollup": "^2.66.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0"
   },
   "eslintConfig": {
     "root": true,
@@ -38,5 +68,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {}
 }
