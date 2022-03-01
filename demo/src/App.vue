@@ -1,6 +1,9 @@
 <template>
   <div id='app'>
-    <Notification position='left-top'/>
+    <Notification
+      position='left-bottom'
+      :duration=5000
+    />
     <Test style="float: right" />
   </div>
 </template>

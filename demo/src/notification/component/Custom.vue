@@ -19,6 +19,6 @@ export default {
   .custom {
     border-radius: 5px;
     background-color: lightgray;
-    padding: 5px;
+    padding: 3px;
   }
 </style>

@@ -1,7 +1,7 @@
 const success = (app, message) => {
   app.$notification({
     type: 'success',
-    // classes: 'success',
+    classes: 'customStyle',
     contents: message,
   })
 }

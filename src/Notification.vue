@@ -5,13 +5,12 @@
     @leave='leave'
   >
     <div
-      ref='item'
+      ref='items'
       v-for='item in queue'
       :key='item'
       :style='defineStyles'
     >
       <component
-        v-if='item.isVisible'
         :is='item.option.component'
         :type='item.type'
         :option='item.option'
@@ -42,6 +41,14 @@ export default {
     position: {
       type: String,
       default: 'center-bottom',
+    },
+    speed: {
+      type: Number,
+      default: 1000,
+    },
+    duration: {
+      type: Number,
+      default: 3000,
     },
   },
   data: function () {
@@ -74,7 +81,6 @@ export default {
       option.component = shallowRef(option.component || DefaultInterface)
 
       this.queue.push({
-        isVisible: true,
         option: option,
         type: type,
       })
@@ -83,30 +89,26 @@ export default {
       this.windowWidth = window.innerWidth
     },
     beforeEnter: function (el) {
-      console.log('befor enter')
       el.style.opacity = 0
     },
     afterEnter: function (el) {
-      console.log('after enter')
       const queueLength = this.queue.length - 1
       const operator = this.position.indexOf('bottom') !== -1 ? '-' : ''
 
-      this.$refs.item.forEach((element, key) => {
+      this.$refs.items.forEach((item, key) => {
         const translate = (queueLength - key) * this.height + 10 * (this.queue.length - key)
-        element.style.transform = `translateY(${operator}${translate}px)`
+        item.style.transform = `translateY(${operator}${translate}px)`
       })
       el.style.opacity = 1
-      el.style.transition = 'all 1000ms'
+      el.style.transition = `all ${this.speed}ms`
 
       setTimeout(() => {
-        this.isVisible = false
-      }, 5000)
+        this.queue.shift()
+      }, this.duration)
     },
     leave: function (el, done) {
-      console.log('leave')
       el.style.opacity = 0
-      el.style.transform = 'translateY(10px)'
-      el.style.transition = 'all 1000ms'
+      el.style.transform = 'translateY(0px)'
     },
   },
 }

@@ -35,18 +35,18 @@ export default {
 </script>
 
 <style>
-  .success {
+  .customStyle {
     width: 100%;
     height: 100%;
     border-radius: 5px;
     background-color: green;
     line-height: 50px;
   }
-  .success img {
+  .customStyle img {
     margin-left: 20px;
     vertical-align: middle;
   }
-  .success span {
+  .customStyle span {
     margin-left: 20px;
     color: white;
     vertical-align: middle;
