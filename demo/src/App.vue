@@ -1,6 +1,6 @@
 <template>
   <div id='app'>
-    <Notification position='right-bottom'/>
+    <Notification position='left-top'/>
     <Test style="float: right" />
   </div>
 </template>

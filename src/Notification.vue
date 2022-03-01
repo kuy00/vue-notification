@@ -33,7 +33,7 @@ export default {
   props: {
     width: {
       type: Number,
-      default: 300,
+      default: 250,
     },
     height: {
       type: Number,
@@ -89,9 +89,11 @@ export default {
     afterEnter: function (el) {
       console.log('after enter')
       const queueLength = this.queue.length - 1
+      const operator = this.position.indexOf('bottom') !== -1 ? '-' : ''
+
       this.$refs.item.forEach((element, key) => {
-        const translate = (queueLength - key) * (this.height + 10)
-        element.style.transform = `translateY(-${translate}px)`
+        const translate = (queueLength - key) * this.height + 10 * (this.queue.length - key)
+        element.style.transform = `translateY(${operator}${translate}px)`
       })
       el.style.opacity = 1
       el.style.transition = 'all 1000ms'

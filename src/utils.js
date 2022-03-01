@@ -19,7 +19,7 @@ export const parsePosition = (position, width) => {
   }
 
   if (positions.y.includes(y)) {
-    location[y] = '1%'
+    location[y] = '0%'
   }
 
   return location
