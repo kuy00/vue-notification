@@ -12,7 +12,7 @@
     >
       <component
         v-if='item.isVisible'
-        :is='item.component'
+        :is='item.option.component'
         :type='item.type'
         :option='item.option'
       />
@@ -77,7 +77,6 @@ export default {
         option: option,
         type: type,
       })
-      console.log(this.queue)
     },
     handleResize: function () {
       this.windowWidth = window.innerWidth
