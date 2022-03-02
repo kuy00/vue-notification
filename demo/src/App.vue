@@ -4,7 +4,7 @@
       position='left-bottom'
       :duration=5000
     />
-    <Test style="float: right" />
+    <Test />
   </div>
 </template>
 

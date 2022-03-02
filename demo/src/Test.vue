@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <button v-on:click='notification1()'>success</button>
-    <button v-on:click='notification2()'>error</button>
-    <button v-on:click='notification3()'>warning</button>
-    <button v-on:click='notification4()'>info</button>
-    <button v-on:click='notification5()'>custom</button>
+  <div class='btn-group'>
+    <button class='btn btn-success' v-on:click='notification1()'>success</button>
+    <button class='btn btn-error' v-on:click='notification2()'>error</button>
+    <button class='btn btn-warning' v-on:click='notification3()'>warning</button>
+    <button class='btn btn-info' v-on:click='notification4()'>info</button>
+    <button class='btn btn-custom' v-on:click='notification5()'>custom</button>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
       success(this, 'success message')
     },
     notification2: function () {
-      error(this, 'error message')
+      error(this, 'error<BR>exceptoin: server error')
     },
     notification3: function () {
       warning(this, 'warning message')
@@ -50,5 +50,30 @@ export default {
     margin-left: 20px;
     color: white;
     vertical-align: middle;
+  }
+  .btn {
+    border: none;
+    margin: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-success {
+    background-color: #2ee659;
+  }
+  .btn-error {
+    background-color: #f52a40;
+  }
+  .btn-warning {
+    background-color: #ffd04f;
+  }
+  .btn-info {
+    background-color: #a1a1a1;
+  }
+  .btn-custom {
+    background-color: black;
   }
 </style>

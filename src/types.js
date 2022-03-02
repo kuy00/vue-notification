@@ -10,19 +10,19 @@ const properties = {
 
 const types = {
   success: {
-    backgroundColor: '#21BA45',
+    backgroundColor: '#2ee659',
     image: success,
   },
   error: {
-    backgroundColor: '#C10015',
+    backgroundColor: '#f52a40',
     image: error,
   },
   warning: {
-    backgroundColor: '#F2C13B',
+    backgroundColor: '#ffd04f',
     image: warning,
   },
   info: {
-    backgroundColor: '#616161',
+    backgroundColor: '#a1a1a1',
     image: info,
   },
 }

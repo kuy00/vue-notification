@@ -6,7 +6,7 @@
   >
     <div
       ref='items'
-      v-for='item in queue'
+      v-for='(item, index) in queue'
       :key='item'
       :style='defineStyles'
     >
@@ -14,6 +14,7 @@
         :is='item.option.component'
         :type='item.type'
         :option='item.option'
+        v-on:click='unset(index)'
       />
     </div>
   </transition-group>
@@ -54,6 +55,7 @@ export default {
   data: function () {
     return {
       queue: [],
+      timer: [],
       windowWidth: window.innerWidth,
     }
   },
@@ -68,8 +70,9 @@ export default {
       const styles = {
         ...location,
         position: 'absolute',
-        width: this.width + 'px',
-        height: this.height + 'px',
+        'min-width': this.width + 'px',
+        'min-height': this.height + 'px',
+        'max-width': '500px',
       }
       return styles
     },
@@ -92,23 +95,36 @@ export default {
       el.style.opacity = 0
     },
     afterEnter: function (el) {
-      const queueLength = this.queue.length - 1
-      const operator = this.position.indexOf('bottom') !== -1 ? '-' : ''
-
-      this.$refs.items.forEach((item, key) => {
-        const translate = (queueLength - key) * this.height + 10 * (this.queue.length - key)
-        item.style.transform = `translateY(${operator}${translate}px)`
-      })
       el.style.opacity = 1
       el.style.transition = `all ${this.speed}ms`
+      this.animation()
 
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         this.queue.shift()
+        this.timer.shift()
       }, this.duration)
+      this.timer.push(timer)
     },
     leave: function (el, done) {
-      el.style.opacity = 0
-      el.style.transform = 'translateY(0px)'
+      el.remove()
+      this.animation()
+    },
+    unset: function (index) {
+      clearTimeout(this.timer[index])
+      this.timer.splice(index, 1)
+      this.queue.splice(index, 1)
+    },
+    animation: function () {
+      const operator = this.position.indexOf('bottom') !== -1 ? '-' : ''
+      const reserveItems = Object.values(this.$refs.items).reverse()
+      let stackedHeight = 0
+      let translate = 0
+
+      reserveItems.forEach((item, key) => {
+        translate = stackedHeight + 10 * (key + 1)
+        item.style.transform = `translateY(${operator}${translate}px)`
+        stackedHeight += item.offsetHeight
+      })
     },
   },
 }

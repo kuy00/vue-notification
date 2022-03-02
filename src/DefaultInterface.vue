@@ -28,20 +28,22 @@ export default {
 
 <style>
   .notification {
+    display: flex;
     width: 100%;
-    height: 100%;
     border-radius: 5px;
-    line-height: 50px;
+    padding: 14px 0px;
   }
   .notification img {
-    vertical-align: middle;
     margin-left: 20px;
+    align-self: center;
   }
 
   .notification span {
-    margin-left: 20px;
+    margin: 0px 20px;
+    font-weight: bold;
     font-size: 16px;
+    line-height: 22px;
     color: white;
-    vertical-align: middle;
+    align-self: center;
   }
 </style>

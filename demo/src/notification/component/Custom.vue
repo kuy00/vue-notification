@@ -18,7 +18,11 @@ export default {
 <style>
   .custom {
     border-radius: 5px;
-    background-color: lightgray;
-    padding: 3px;
+    background-color: black;
+    padding: 14px 0px;
+  }
+  .custom span {
+    margin: 0px 20px;
+    color: white;
   }
 </style>
