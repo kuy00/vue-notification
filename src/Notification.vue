@@ -2,7 +2,8 @@
   <transition-group
     @before-enter='beforeEnter'
     @after-enter='afterEnter'
-    @leave='leave'
+    @before-leave='beforLeave'
+    @after-leave='afterLeave'
   >
     <div
       ref='items'
@@ -105,12 +106,12 @@ export default {
       }, this.duration)
       this.timer.push(timer)
     },
-    leave: function (el, done) {
+    beforLeave: function (el, done) {
       el.style.opacity = 0
       el.style.transform = 'translateY(0px)'
-      setTimeout(() => {
-        el.remove()
-      }, 1000)
+    },
+    afterLeave: function (el) {
+      el.remove()
     },
     unset: function (index) {
       clearTimeout(this.timer[index])
