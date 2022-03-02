@@ -109,6 +109,7 @@ export default {
     beforLeave: function (el, done) {
       el.style.opacity = 0
       el.style.transform = 'translateY(0px)'
+      this.animation()
     },
     afterLeave: function (el) {
       el.remove()
