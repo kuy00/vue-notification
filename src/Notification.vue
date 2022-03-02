@@ -14,7 +14,7 @@
         :is='item.option.component'
         :type='item.type'
         :option='item.option'
-        v-on:click='unset(index)'
+        @click='unset(index)'
       />
     </div>
   </transition-group>
@@ -106,8 +106,11 @@ export default {
       this.timer.push(timer)
     },
     leave: function (el, done) {
-      el.remove()
-      this.animation()
+      el.style.opacity = 0
+      el.style.transform = 'translateY(0px)'
+      setTimeout(() => {
+        el.remove()
+      }, 1000)
     },
     unset: function (index) {
       clearTimeout(this.timer[index])

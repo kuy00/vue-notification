@@ -1,10 +1,10 @@
 <template>
   <div class='btn-group'>
-    <button class='btn btn-success' v-on:click='notification1()'>success</button>
-    <button class='btn btn-error' v-on:click='notification2()'>error</button>
-    <button class='btn btn-warning' v-on:click='notification3()'>warning</button>
-    <button class='btn btn-info' v-on:click='notification4()'>info</button>
-    <button class='btn btn-custom' v-on:click='notification5()'>custom</button>
+    <button class='btn btn-success' @click='notification1()'>success</button>
+    <button class='btn btn-error' @click='notification2()'>error</button>
+    <button class='btn btn-warning' @click='notification3()'>warning</button>
+    <button class='btn btn-info' @click='notification4()'>info</button>
+    <button class='btn btn-custom' @click='notification5()'>custom</button>
   </div>
 </template>
 
