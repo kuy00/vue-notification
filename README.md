@@ -11,14 +11,14 @@ This allows settings that do not require individual settings, such as the size, 
 
 package install
 ```bash
-npm install --save @kuy/vue-notification
+npm install --save @kuy472013/vue-notification
 ```
 
 `main.js`
 ```javascript
 import { createApp } from 'vue'
 import App from './App.vue'
-import Notifications from '@kuy/vue-notification'
+import Notifications from '@kuy472013/vue-notification'
 
 const app = createApp(App)
 app.use(Notifications)
