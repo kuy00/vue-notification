@@ -1,8 +1,8 @@
 # Vue.js Notification
 
-<div style="text-align: center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/27402363/156883079-18baaf9a-2cb5-44fb-b16c-735cfcbb3443.gif">
-</div>
+</p>
 This allows settings that do not require individual settings, such as the size, location, and animation of the notification, to be set through props, and is designed to allow individual notification styles to be specified through API.
 
 ## Setup
