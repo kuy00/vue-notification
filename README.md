@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/@kuy472013%2Fvue-notification.svg)](https://badge.fury.io/js/@kuy472013%2Fvue-notification)
+
 # Vue.js Notification
 
 <p align="center">
