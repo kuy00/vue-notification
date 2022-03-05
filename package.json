@@ -1,29 +1,21 @@
 {
   "name": "@kuy/vue-notification",
-  "description": "package that lets you use SVG files as Vue components",
+  "description": "Package to display notifications in vue.",
   "version": "1.0.0",
   "private": false,
   "author": "kuy",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/woo-yeong/vue-notification"
   },
   "bugs": {
-    "url": "",
+    "url": "https://github.com/woo-yeong/vue-notification/issues",
     "email": "kuy47201@gmail.com"
   },
   "license": "MIT",
   "main": "dist/index.esm.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.em.js",
-      "require": "./dist/index.umd.js"
-    }
-  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "rollup --config rollup.config.js",
-    "lint": "vue-cli-service lint"
+    "build": "rollup --config rollup.config.js"
   },
   "peerDependencies": {
     "vue": "^3.2.31"
@@ -69,5 +61,14 @@
     "last 2 versions",
     "not dead"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "vue",
+    "vue3",
+    "notification",
+    "notify",
+    "vue-notification",
+    "toast",
+    "message"
+  ]
 }
