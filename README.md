@@ -57,11 +57,11 @@ Common notification settings can be changed using props.
 ```
 | Name         | Type     | Default         | Description                                                                                                                                                                   |
 | ------------ | -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| width        | Number   | 250             | Option to set the width of the notification element. (must be a numeric, unit: px)                                                                                            |
-| height       | Number   | 50              | Option to set the heigth of the notification element. (must be a numeric, unit: px)                                                                                           |
+| width        | Number   | 250             | Option to set the width of the notification element.<br>(must be a numeric, unit: px)                                                                                            |
+| height       | Number   | 50              | Option to set the heigth of the notification element.<br>(must be a numeric, unit: px)                                                                                           |
 | position     | String   | center-bottom   | Option to specify where the notification element will be shown.<br>Please enter a combination of the values below.<br>X: ['left', 'right', 'center']<br>Y: ['top', 'bottom']  |
-| speed        | Number   | 1000            | Option to set the animation duration of the notification element. (unit: ms)                                                                                                  |
-| duration     | Number   | 3000            | Option to set how long the notification element stays on the screen. (unit: ms)                                                                                               |
+| speed        | Number   | 1000            | Option to set the animation duration of the notification element.<br>(unit: ms)                                                                                                  |
+| duration     | Number   | 3000            | Option to set how long the notification element stays on the screen.<br>(unit: ms)                                                                                               |
 
 ## API
 
