@@ -1,15 +1,15 @@
 {
-  "name": "@kuy/vue-notification",
+  "name": "@kuy00/vue-notification",
   "description": "Package to display notifications in vue.",
   "version": "1.0.0",
   "private": false,
   "author": "kuy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/woo-yeong/vue-notification"
+    "url": "https://github.com/kuy00/vue-notification"
   },
   "bugs": {
-    "url": "https://github.com/woo-yeong/vue-notification/issues",
+    "url": "https://github.com/kuy00/vue-notification",
     "email": "kuy47201@gmail.com"
   },
   "license": "MIT",
