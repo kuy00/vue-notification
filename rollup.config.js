@@ -2,6 +2,7 @@ import vue from 'rollup-plugin-vue'
 import image from '@rollup/plugin-image'
 import alias from '@rollup/plugin-alias'
 import postcss from 'rollup-plugin-postcss'
+import resolve from '@rollup/plugin-node-resolve'
 
 export default {
   input: 'src/main.js',
@@ -17,7 +18,6 @@ export default {
       exports: 'auto',
     },
   ],
-  external: ['mitt', 'vue'],
   plugins: [
     vue({
       preprocessStyles: true,
@@ -31,5 +31,6 @@ export default {
         { find: '@', replacement: 'src' },
       ],
     }),
+    resolve(),
   ],
 }
