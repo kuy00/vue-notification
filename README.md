@@ -78,4 +78,4 @@ app.$notification({
 | type         | String          | info            | You can use the notification plugin to set among the types of notifications provided by default.<br>supported types : success, error, warning, info                           |
 | classes      | String          | null            | You can set up a separate class using the notification plugin to specify custom styles.                                                                                       |
 | contents     | String          | message         | You can configure the content of the notification using the notification plugin.                                                                                              |
-| component    | Vue Component   | message         | By using the notification plugin, you can use a component created separately from the design provided by default.                                                             |
+| component    | Vue Component   | null            | By using the notification plugin, you can use a component created separately from the design provided by default.                                                             |
