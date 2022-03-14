@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/@kuy472013%2Fvue-notification.svg)](https://badge.fury.io/js/@kuy472013%2Fvue-notification)
+[![npm](https://img.shields.io/npm/dm/@kuy472013/vue-notification)](https://www.npmjs.com/package/@kuy472013/vue-notification)
 
 # Vue.js Notification
 
