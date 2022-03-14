@@ -1,7 +1,7 @@
 {
   "name": "@kuy472013/vue-notification",
   "description": "Package to display notifications in vue.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "author": "kuy",
   "repository": {
